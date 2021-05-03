@@ -4,13 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-/**
- * Created by Axel Jeansson
- * Date: 2021-05-03
- * Time: 20:21
- * Project: jeopardy
- * Copyright: MIT
- */
+
 @Entity
 public class Category {
     @Id
