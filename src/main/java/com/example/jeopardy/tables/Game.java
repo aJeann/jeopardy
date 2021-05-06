@@ -14,7 +14,7 @@ import java.util.List;
 public class Game {
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
     private String name;
 
 
