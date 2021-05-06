@@ -24,7 +24,6 @@ public class Category {
     @ManyToOne(targetEntity = Game.class)
     private Game game;
 
-
     public Category() {
     }
 

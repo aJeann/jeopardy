@@ -78,4 +78,9 @@ class HelloWorldController {
         return gameRepository.findAll();
     }
 
+    @GetMapping(path="/allCats")
+    public @ResponseBody Iterable<Category> getAllCats() {
+        return categoryRepository.findAll();
+    }
+
 }
