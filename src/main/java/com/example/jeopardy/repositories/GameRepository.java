@@ -12,4 +12,5 @@ import org.springframework.data.repository.CrudRepository;
  * Copyright: MIT
  */
 public interface GameRepository extends CrudRepository<Game, Long> {
+    Game findByName (String name);
 }
