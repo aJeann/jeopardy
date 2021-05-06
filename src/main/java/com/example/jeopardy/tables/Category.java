@@ -3,6 +3,7 @@ package com.example.jeopardy.tables;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 
 @Entity
@@ -23,12 +24,14 @@ public class Category {
     private String answer5;
     private String finalQ;
     private String finalA;
+    @ManyToOne
+    private Game game;
 
 
     public Category() {
     }
 
-    public Category(String name, String question1, String answer1, String question2, String answer2, String question3, String answer3, String question4, String answer4, String question5, String answer5, String finalQ, String finalA) {
+    public Category(String name, String question1, String answer1, String question2, String answer2, String question3, String answer3, String question4, String answer4, String question5, String answer5, String finalQ, String finalA, Game game) {
         this.name = name;
         this.question1 = question1;
         this.answer1 = answer1;
@@ -42,6 +45,7 @@ public class Category {
         this.answer5 = answer5;
         this.finalQ = finalQ;
         this.finalA = finalA;
+        this.game = game;
     }
 
     public String getName() {
@@ -146,5 +150,13 @@ public class Category {
 
     public void setFinalA(String finalA) {
         this.finalA = finalA;
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
     }
 }

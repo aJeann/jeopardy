@@ -16,15 +16,13 @@ public class Game {
     @GeneratedValue
     private long id;
     private String name;
-    @ManyToOne
-    private Category category;
+
 
     public Game() {
     }
 
     public Game(String name, Category category) {
         this.name = name;
-        this.category = category;
     }
 
     public String getName() {
@@ -35,12 +33,5 @@ public class Game {
         this.name = name;
     }
 
-    public Category getCategoryList() {
-        return category;
-    }
-
-    public void setCategoryList(Category category) {
-        this.category = category;
-    }
 }
 
