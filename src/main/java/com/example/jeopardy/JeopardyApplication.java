@@ -64,6 +64,8 @@ class HelloWorldController {
         currentCategory.setFinalA(finalA);
         currentCategory.setFinalQ(finalQ);
 
+        categoryRepository.save(currentCategory);
+
     }
 
     @GetMapping(path="/all")
