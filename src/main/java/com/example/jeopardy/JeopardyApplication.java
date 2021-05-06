@@ -19,6 +19,7 @@ public class JeopardyApplication {
 }
 
 @RestController
+@CrossOrigin
 class HelloWorldController {
     @Autowired
     private GameRepository gameRepository;
