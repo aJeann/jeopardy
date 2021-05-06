@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 public class Category {
     @Id
     @GeneratedValue
-    private Long Id;
+    private Long id;
     private String name;
     private String question1;
     private String answer1;
