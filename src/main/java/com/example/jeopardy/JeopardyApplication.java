@@ -39,8 +39,8 @@ class HelloWorldController {
         currentGame = gameRepository.findByName(name);
 
         if(currentGame == null){
-            currentGame.setName(name);
-            gameRepository.save(currentGame);
+            Game game = new Game(name);
+            gameRepository.save(game);
         }
 
 
