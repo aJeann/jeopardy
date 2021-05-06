@@ -43,11 +43,11 @@ class HelloWorldController {
 
     @GetMapping(path = "/addCategory")
     public @ResponseBody
-    void addCategory(@RequestParam String game_name, @RequestParam String name, @RequestParam String q1, @RequestParam String a1,
+    void addCategory(@RequestParam Long game_id, @RequestParam String name, @RequestParam String q1, @RequestParam String a1,
                          @RequestParam String q2, @RequestParam String a2, @RequestParam String q3, @RequestParam String a3,
                          @RequestParam String q4, @RequestParam String a4, @RequestParam String q5, @RequestParam String a5, @RequestParam String finalA, @RequestParam String finalQ) {
 
-        currentGame = gameRepository.findByName(game_name);
+        currentGame = gameRepository.findById(game_id).get();
 
         currentCategory.setGame(currentGame);
         currentCategory.setName(name);
