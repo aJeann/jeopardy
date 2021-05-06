@@ -1,9 +1,6 @@
 package com.example.jeopardy.tables;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -19,15 +16,15 @@ public class Game {
     @GeneratedValue
     private long id;
     private String name;
-    @OneToMany
-    private List<Category> categoryList;
+    @ManyToOne
+    private Category category;
 
     public Game() {
     }
 
-    public Game(String name, List<Category> categoryList) {
+    public Game(String name, Category category) {
         this.name = name;
-        this.categoryList = categoryList;
+        this.category = category;
     }
 
     public String getName() {
@@ -38,12 +35,12 @@ public class Game {
         this.name = name;
     }
 
-    public List<Category> getCategoryList() {
-        return categoryList;
+    public Category getCategoryList() {
+        return category;
     }
 
-    public void setCategoryList(List<Category> categoryList) {
-        this.categoryList = categoryList;
+    public void setCategoryList(Category category) {
+        this.category = category;
     }
 }
 
