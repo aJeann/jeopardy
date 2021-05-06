@@ -21,7 +21,7 @@ public class Category {
     private String answer5;
     private String finalQ;
     private String finalA;
-    @ManyToOne
+    @ManyToOne(targetEntity = Game.class)
     private Game game;
 
 
