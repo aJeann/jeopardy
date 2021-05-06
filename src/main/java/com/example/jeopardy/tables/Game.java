@@ -21,7 +21,7 @@ public class Game {
     public Game() {
     }
 
-    public Game(String name, Category category) {
+    public Game(String name) {
         this.name = name;
     }
 
