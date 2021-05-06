@@ -35,9 +35,14 @@ class HelloWorldController {
     @GetMapping(path = "/addGame")
     public @ResponseBody
     void addGame(@RequestParam String name){
-        currentGame.setName(name);
 
-        gameRepository.save(currentGame);
+        currentGame = gameRepository.findByName(name);
+
+        if(currentGame == null){
+            currentGame.setName(name);
+            gameRepository.save(currentGame);
+        }
+
 
     }
 
