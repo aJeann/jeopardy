@@ -50,7 +50,7 @@ class HelloWorldController {
     public @ResponseBody
     void addCategory(@RequestParam Long game_id, @RequestParam Long cat_id, @RequestParam String name, @RequestParam String q1, @RequestParam String a1,
                          @RequestParam String q2, @RequestParam String a2, @RequestParam String q3, @RequestParam String a3,
-                         @RequestParam String q4, @RequestParam String a4, @RequestParam String q5, @RequestParam String a5, @RequestParam String finalA, @RequestParam String finalQ) {
+                         @RequestParam String q4, @RequestParam String a4, @RequestParam String q5, @RequestParam String a5, @RequestParam String finalC, @RequestParam String finalA, @RequestParam String finalQ) {
 
         currentGame = gameRepository.findById(game_id).get();
 
@@ -68,6 +68,7 @@ class HelloWorldController {
         currentCategory.setAnswer3(a3);
         currentCategory.setAnswer4(a4);
         currentCategory.setAnswer5(a5);
+        currentCategory.setFinalC(finalC);
         currentCategory.setFinalA(finalA);
         currentCategory.setFinalQ(finalQ);
 
@@ -86,3 +87,5 @@ class HelloWorldController {
     }
 
 }
+
+

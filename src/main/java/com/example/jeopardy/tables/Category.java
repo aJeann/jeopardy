@@ -19,6 +19,7 @@ public class Category {
     private String answer4;
     private String question5;
     private String answer5;
+    private String finalC;
     private String finalQ;
     private String finalA;
     @ManyToOne(targetEntity = Game.class)
@@ -27,7 +28,7 @@ public class Category {
     public Category() {
     }
 
-    public Category(String name, String question1, String answer1, String question2, String answer2, String question3, String answer3, String question4, String answer4, String question5, String answer5, String finalQ, String finalA, Game game) {
+    public Category(String name, String question1, String answer1, String question2, String answer2, String question3, String answer3, String question4, String answer4, String question5, String answer5, String finalC, String finalQ, String finalA, Game game) {
         this.name = name;
         this.question1 = question1;
         this.answer1 = answer1;
@@ -39,6 +40,7 @@ public class Category {
         this.answer4 = answer4;
         this.question5 = question5;
         this.answer5 = answer5;
+        this.finalC = finalC;
         this.finalQ = finalQ;
         this.finalA = finalA;
         this.game = game;
@@ -162,5 +164,13 @@ public class Category {
 
     public void setGame(Game game) {
         this.game = game;
+    }
+
+    public String getFinalC() {
+        return finalC;
+    }
+
+    public void setFinalC(String finalC) {
+        this.finalC = finalC;
     }
 }
